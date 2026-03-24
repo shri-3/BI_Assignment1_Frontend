@@ -7,7 +7,7 @@ import { formatDate } from "../../utils/dateFormatters";
 const EventDetails = () => {
   const { id } = useParams();
 
-  const apiUrl = `http://localhost:50001/api/events/${id}`;
+  const apiUrl = `https://bi-assignment1-backend-murex.vercel.app/api/events/${id}`;
   const { data, loading, error, refetch } = useFetch(apiUrl);
 
   return (

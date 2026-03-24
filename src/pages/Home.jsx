@@ -4,11 +4,11 @@ import events from "../data/events";
 import useFetch from "../hooks/useFetch";
 
 const Home = ({ searchTerm, eventType }) => {
-  const url = `http://localhost:50001/api/events`;
+  const url = `https://bi-assignment1-backend-murex.vercel.app/api/events`;
   const [apiUrl, setApiUrl] = useState(url);
 
   useEffect(() => {
-    let url = `http://localhost:50001/api/events/search?`;
+    let url = `https://bi-assignment1-backend-murex.vercel.app/api/events/search?`;
     if (searchTerm) {
       url += `&title=${searchTerm}`;
     } else {
