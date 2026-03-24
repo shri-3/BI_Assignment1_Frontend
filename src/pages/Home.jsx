@@ -4,11 +4,11 @@ import events from "../data/events";
 import useFetch from "../hooks/useFetch";
 
 const Home = ({ searchTerm, eventType }) => {
-  const url = `http://localhost:50001/meetups`;
+  const url = `http://localhost:50001/api/events`;
   const [apiUrl, setApiUrl] = useState(url);
 
   useEffect(() => {
-    let url = `http://localhost:50001/meetups/search?`;
+    let url = `http://localhost:50001/api/events/search?`;
     if (searchTerm) {
       url += `&title=${searchTerm}`;
     } else {

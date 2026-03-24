@@ -7,7 +7,7 @@ import { formatDate } from "../../utils/dateFormatters";
 const EventDetails = () => {
   const { id } = useParams();
 
-  const apiUrl = `http://localhost:50001/meetups/${id}`;
+  const apiUrl = `http://localhost:50001/api/events/${id}`;
   const { data, loading, error, refetch } = useFetch(apiUrl);
 
   return (
